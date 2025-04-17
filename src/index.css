@@ -249,4 +249,22 @@ code {
   .hamburger-icon {
     display: none;
   }
+
+  .main-body > div {
+    width: 1110px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 9.5rem;
+  }
+
+  .heading-text-content {
+    width: 540px;
+    text-align: left;
+    align-items: start;
+  }
+
+  .hero-text {
+    font-size: 18px;
+    line-height: 180%;
+  }
 }
