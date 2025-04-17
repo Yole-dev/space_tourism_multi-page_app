@@ -56,6 +56,19 @@ function Header() {
       <img src={logo} alt="company logo" className="logo" />
 
       <ion-icon name="menu-outline" className="hamburger-icon"></ion-icon>
+
+      <ul className="tablet-nav-bar">
+        <li>home</li>
+        <li>
+          <span>01</span> destination
+        </li>
+        <li>
+          <span>02</span> crew
+        </li>
+        <li>
+          <span>03</span> technology
+        </li>
+      </ul>
     </div>
   );
 }

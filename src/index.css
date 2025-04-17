@@ -6,6 +6,7 @@
   --font-bellefair: "Bellefair", serif;
   --font-barlow-condensed: "Barlow Condensed", sans-serif;
   --font-barlow: "Barlow", sans-serif;
+  --nav-background: rgba(255, 255, 255, 0.096);
 }
 
 * {
@@ -50,7 +51,7 @@ code {
   width: 100%;
   z-index: 9;
   position: absolute;
-  top: 1rem;
+  top: 0;
 }
 
 .header {
@@ -69,6 +70,10 @@ code {
 .hamburger-icon {
   font-size: 40px;
   color: var(--primary-text-color);
+}
+
+.tablet-nav-bar {
+  display: none;
 }
 
 .main-body {
@@ -143,6 +148,16 @@ code {
     display: none;
   }
 
+  .home-container {
+    top: 0;
+  }
+
+  .header {
+    height: 96px;
+    padding-left: 2rem;
+    padding-right: 0;
+  }
+
   .logo {
     width: 48px;
     height: 48px;
@@ -152,9 +167,45 @@ code {
     display: none;
   }
 
+  .tablet-nav-bar {
+    width: 88%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 3.7rem;
+    padding-right: 1rem;
+    color: var(--primary-text-color);
+    background: var(--nav-background);
+    list-style-type: none;
+  }
+
+  .tablet-nav-bar li {
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-family: var(--font-barlow-condensed);
+    text-transform: uppercase;
+  }
+
+  .tablet-nav-bar li::after {
+    content: " ";
+    display: flex;
+    gap: 3.7rem;
+    position: relative;
+    top: 2.2rem;
+    width: 100%;
+    height: 4px;
+    background: var(--primary-text-color);
+  }
+
+  .tablet-nav-bar li span {
+    font: 600;
+  }
+
   .main-body > div {
     width: 688px;
-    gap: 8.5rem;
+    gap: 4rem;
+    margin-top: 6rem;
   }
 
   .heading-text-content {
