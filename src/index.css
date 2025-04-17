@@ -1,13 +1,103 @@
+:root {
+  --primary-text-color: white;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.bg-container {
+  z-index: -1;
+  height: 100vh;
+  width: 100vw;
+}
+
+.bg-container img {
+  width: inherit;
+  height: inherit;
+}
+
+.mobile-bg {
+  display: block;
+}
+
+.tablet-bg {
+  display: none;
+}
+
+.desktop-bg {
+  display: none;
+}
+
+.home-container {
+  width: 100%;
+  z-index: 9;
+  position: absolute;
+  top: 1rem;
+}
+
+.header {
+  height: 88px;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+}
+
+.hamburger-icon {
+  width: 24px;
+  height: 21px;
+  color: var(--primary-text-color);
+}
+
+.main-body {
+  width: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .mobile-bg {
+    display: none;
+  }
+
+  .tablet-bg {
+    display: block;
+  }
+
+  .desktop-bg {
+    display: none;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1440px) {
+  .mobile-bg {
+    display: none;
+  }
+
+  .tablet-bg {
+    display: none;
+  }
+
+  .desktop-bg {
+    display: block;
+  }
 }
