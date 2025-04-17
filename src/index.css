@@ -86,7 +86,7 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 11.5rem;
+  gap: 14rem;
   margin-top: 1rem;
   color: var(--primary-text-color);
 }
