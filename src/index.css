@@ -6,7 +6,8 @@
   --font-bellefair: "Bellefair", serif;
   --font-barlow-condensed: "Barlow Condensed", sans-serif;
   --font-barlow: "Barlow", sans-serif;
-  --nav-background: rgba(255, 255, 255, 0.096);
+  --tablet-nav-background: rgba(255, 255, 255, 0.096);
+  --desktop-nav-background: rgba(255, 255, 255, 0.068);
 }
 
 * {
@@ -67,12 +68,16 @@ code {
   height: 40px;
 }
 
+.header hr {
+  display: none;
+}
+
 .hamburger-icon {
   font-size: 40px;
   color: var(--primary-text-color);
 }
 
-.tablet-nav-bar {
+.nav-bar {
   display: none;
 }
 
@@ -163,11 +168,15 @@ code {
     height: 48px;
   }
 
+  .header hr {
+    display: none;
+  }
+
   .hamburger-icon {
     display: none;
   }
 
-  .tablet-nav-bar {
+  .nav-bar {
     width: 88%;
     height: inherit;
     display: flex;
@@ -176,18 +185,18 @@ code {
     gap: 3.7rem;
     padding-right: 1rem;
     color: var(--primary-text-color);
-    background: var(--nav-background);
+    background: var(--tablet-nav-background);
     list-style-type: none;
   }
 
-  .tablet-nav-bar li {
+  .nav-bar li {
     font-size: 16px;
     letter-spacing: 2px;
     font-family: var(--font-barlow-condensed);
     text-transform: uppercase;
   }
 
-  .tablet-nav-bar li::after {
+  .nav-bar li::after {
     content: " ";
     display: flex;
     gap: 3.7rem;
@@ -198,8 +207,12 @@ code {
     background: var(--primary-text-color);
   }
 
-  .tablet-nav-bar li span {
-    font: 600;
+  .nav-bar li span {
+    font: 700;
+  }
+
+  .desktop-home-tag {
+    display: none;
   }
 
   .main-body > div {
@@ -246,8 +259,39 @@ code {
     display: block;
   }
 
+  .home-container {
+    top: 1rem;
+  }
+
+  .header {
+    padding-left: 4rem;
+  }
+
+  .header hr {
+    z-index: 99;
+    position: relative;
+    left: 3rem;
+    display: block;
+    height: 1px;
+    width: 40%;
+    background: var(--desktop-nav-background);
+    backdrop-filter: blur(17px);
+    opacity: 0.4;
+  }
+
   .hamburger-icon {
     display: none;
+  }
+
+  .nav-bar {
+    width: 55%;
+    padding-right: 4rem;
+    background: var(--desktop-nav-background);
+    backdrop-filter: blur(17px);
+  }
+
+  .desktop-home-tag {
+    display: inline-block;
   }
 
   .main-body > div {

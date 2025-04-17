@@ -57,8 +57,11 @@ function Header() {
 
       <ion-icon name="menu-outline" className="hamburger-icon"></ion-icon>
 
-      <ul className="tablet-nav-bar">
-        <li>home</li>
+      <hr />
+      <ul className="nav-bar">
+        <li>
+          <span className="desktop-home-tag">00</span> home
+        </li>
         <li>
           <span>01</span> destination
         </li>
