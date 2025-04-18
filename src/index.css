@@ -171,24 +171,25 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
+  gap: 15rem;
   padding: 0 1.5rem;
   text-align: center;
 }
 
 .heading-text-content {
+  width: 327px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .heading1 {
   text-transform: uppercase;
   font-size: 16px;
-  letter-spacing: 2.7px;
   font-weight: 200;
   font-family: var(--font-barlow-condensed);
+  letter-spacing: 15%;
 }
 
 .heading2 {
@@ -202,7 +203,7 @@ main {
   font-family: var(--font-barlow);
   font-size: 15px;
   font-weight: 200;
-  line-height: 2;
+  line-height: 180%;
 }
 
 .explore-btn {
