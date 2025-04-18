@@ -2,6 +2,7 @@ import mobileBackground from "./assets/images/home/background-home-mobile.jpg";
 import tabletBackground from "./assets/images/home/background-home-tablet.jpg";
 import desktopBackground from "./assets/images/home/background-home-desktop.jpg";
 import logo from "./assets/images/shared/logo.svg";
+import { useState } from "react";
 
 export default function App() {
   return (
@@ -20,6 +21,12 @@ function Pages() {
 }
 
 function HomePage() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  function handleNavToggle() {
+    setIsOpen(!isOpen);
+  }
+
   return (
     <div className="">
       <div className="bg-container">
@@ -43,14 +50,20 @@ function HomePage() {
       </div>
 
       <div className="home-container">
-        <div className="mobile-nav-container">
-          <ion-icon name="close-sharp" className="close-icon"></ion-icon>
+        {isOpen && (
+          <div className="mobile-nav-container">
+            <ion-icon
+              name="close-sharp"
+              className="close-icon"
+              onClick={handleNavToggle}
+            ></ion-icon>
 
-          <ul className="mobile-nav-bar">
-            <NavList />
-          </ul>
-        </div>
-        <Header />
+            <ul className="mobile-nav-bar">
+              <NavList />
+            </ul>
+          </div>
+        )}
+        <Header onNavToggle={handleNavToggle} open={isOpen} />
 
         <Main />
       </div>
@@ -58,12 +71,18 @@ function HomePage() {
   );
 }
 
-function Header() {
+function Header({ onNavToggle, open }) {
   return (
     <div className="header">
       <img src={logo} alt="company logo" className="logo" />
 
-      <ion-icon name="menu-outline" className="hamburger-icon"></ion-icon>
+      {!open && (
+        <ion-icon
+          name="menu-outline"
+          className="hamburger-icon"
+          onClick={onNavToggle}
+        ></ion-icon>
+      )}
 
       <hr />
 
