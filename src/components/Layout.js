@@ -11,33 +11,13 @@ export default function Layout({ children }) {
 
   return (
     <div className="app-container">
-      <div className="bg-container">
-        <img
-          src={require("../assets/images/home/background-home-mobile.jpg")}
-          alt="mobile background"
-          className="mobile-bg"
-        />
-
-        <img
-          src={require("../assets/images/home/background-home-tablet.jpg")}
-          alt="tablet background"
-          className="tablet-bg"
-        />
-
-        <img
-          src={require("../assets/images/home/background-home-desktop.jpg")}
-          alt="desktop background"
-          className="desktop-bg"
-        />
-      </div>
-
       {/* Header/Navigation */}
       <header className="header">
         <img src={logo} alt="company logo" className="logo" />
 
         {!isOpen && (
           <ion-icon
-            name="menu-outline"
+            name="menu-sharp"
             className="hamburger-icon"
             onClick={handleNavToggle}
           ></ion-icon>
@@ -54,7 +34,7 @@ export default function Layout({ children }) {
         {isOpen && (
           <div className="mobile-nav-container">
             <ion-icon
-              name="menu-outline"
+              name="close-sharp"
               className="close-icon"
               onClick={handleNavToggle}
             ></ion-icon>
