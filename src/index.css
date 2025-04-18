@@ -6,6 +6,7 @@
   --font-bellefair: "Bellefair", serif;
   --font-barlow-condensed: "Barlow Condensed", sans-serif;
   --font-barlow: "Barlow", sans-serif;
+  --mobile-nav-background: rgba(255, 255, 255, 0);
   --tablet-nav-background: rgba(255, 255, 255, 0.096);
   --desktop-nav-background: rgba(255, 255, 255, 0.068);
 }
@@ -24,6 +25,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.display-none {
+  display: none !important;
+}
+
+a {
+  text-decoration: none;
+  font-family: inherit;
+  color: var(--primary-text-color);
+}
+
+/* end of default styles */
 
 .bg-container {
   z-index: -1;
@@ -75,6 +88,58 @@ code {
 .hamburger-icon {
   font-size: 40px;
   color: var(--primary-text-color);
+}
+
+.mobile-nav-container {
+  z-index: 999;
+  width: 67%;
+  height: 100vh;
+  position: fixed;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 1rem;
+  background: var(--mobile-nav-background);
+  backdrop-filter: blur(2.3rem);
+  color: var(--primary-text-color);
+  text-transform: uppercase;
+}
+
+.close-icon {
+  font-size: 40px;
+  color: var(--primary-text-color);
+  align-self: end;
+  padding-top: 0.5rem;
+  padding-right: 1.5rem;
+}
+
+.mobile-nav-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 3rem;
+  padding-left: 2rem;
+  list-style-type: none;
+  font-size: 20px;
+}
+
+.mobile-nav-bar li {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.mobile-nav-bar li::after {
+  content: " ";
+  display: block;
+  width: 1.5%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  background: var(--primary-text-color);
 }
 
 .nav-bar {
@@ -173,6 +238,10 @@ code {
   }
 
   .hamburger-icon {
+    display: none;
+  }
+
+  .mobile-nav-container {
     display: none;
   }
 
@@ -280,6 +349,10 @@ code {
   }
 
   .hamburger-icon {
+    display: none;
+  }
+
+  .mobile-nav-container {
     display: none;
   }
 

@@ -43,7 +43,15 @@ function HomePage() {
       </div>
 
       <div className="home-container">
+        <div className="mobile-nav-container">
+          <ion-icon name="close-sharp" className="close-icon"></ion-icon>
+
+          <ul className="mobile-nav-bar">
+            <NavList />
+          </ul>
+        </div>
         <Header />
+
         <Main />
       </div>
     </div>
@@ -58,21 +66,30 @@ function Header() {
       <ion-icon name="menu-outline" className="hamburger-icon"></ion-icon>
 
       <hr />
+
       <ul className="nav-bar">
-        <li>
-          <span className="desktop-home-tag">00</span> home
-        </li>
-        <li>
-          <span>01</span> destination
-        </li>
-        <li>
-          <span>02</span> crew
-        </li>
-        <li>
-          <span>03</span> technology
-        </li>
+        <NavList />
       </ul>
     </div>
+  );
+}
+
+function NavList() {
+  return (
+    <>
+      <li>
+        <span className="desktop-home-tag">00</span> home
+      </li>
+      <li>
+        <span>01</span> destination
+      </li>
+      <li>
+        <span>02</span> crew
+      </li>
+      <li>
+        <span>03</span> technology
+      </li>
+    </>
   );
 }
 
