@@ -77,8 +77,8 @@ function Header() {
 function NavList() {
   return (
     <>
-      <li>
-        <span className="desktop-home-tag">00</span> home
+      <li className="active">
+        <span className="desktop-home-tag ">00</span> home
       </li>
       <li>
         <span>01</span> destination

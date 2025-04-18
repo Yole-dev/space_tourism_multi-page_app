@@ -132,7 +132,7 @@ a {
   position: relative;
 }
 
-.mobile-nav-bar li::after {
+.mobile-nav-bar li.active::after {
   content: " ";
   display: block;
   width: 1.5%;
@@ -265,7 +265,7 @@ a {
     text-transform: uppercase;
   }
 
-  .nav-bar li::after {
+  .nav-bar li.active::after {
     content: " ";
     display: flex;
     gap: 3.7rem;
