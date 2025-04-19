@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/images/shared/logo.svg";
 
 export default function Layout({ children }) {
@@ -55,28 +55,30 @@ export default function Layout({ children }) {
 }
 
 function NavList() {
+  const location = useLocation();
+
+  const navItems = [
+    { path: "/", number: "00", name: "home" },
+    { path: "/destination", number: "01", name: "destination" },
+    { path: "/crew", number: "02", name: "crew" },
+    { path: "/technology", number: "03", name: "technology" },
+  ];
+
   return (
     <>
-      <li className="active">
-        <Link to="/">
-          <span className="desktop-home-tag ">00</span> home
-        </Link>
-      </li>
-      <li>
-        <Link to="/destination">
-          <span>01</span> destination
-        </Link>
-      </li>
-      <li>
-        <Link to="/crew">
-          <span>02</span> crew
-        </Link>
-      </li>
-      <li>
-        <Link to="/technology">
-          <span>03</span> technology
-        </Link>
-      </li>
+      {navItems.map((item) => (
+        <li
+          key={item.path}
+          className={location.pathname === item.path ? "active" : ""}
+        >
+          <Link to={item.path}>
+            <span className={item.path === "/" ? "desktop-home-tag" : ""}>
+              {item.number}
+            </span>{" "}
+            {item.name}
+          </Link>
+        </li>
+      ))}
     </>
   );
 }
