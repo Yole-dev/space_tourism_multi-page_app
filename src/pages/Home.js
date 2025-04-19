@@ -4,7 +4,7 @@ import desktopBackground from "../assets/images/home/background-home-desktop.jpg
 
 export default function Home() {
   return (
-    <div className="home-container">
+    <div className="page-container">
       {/* Background image for home */}
       <div className="bg-container">
         <img

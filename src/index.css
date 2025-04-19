@@ -45,12 +45,12 @@ a {
 }
 
 /* Home-specific background styles */
-.home-container {
+.page-container {
   position: relative;
   overflow: hidden;
 }
 
-.home-container .bg-container {
+.page-container .bg-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -59,7 +59,7 @@ a {
   z-index: -1;
 }
 
-.home-container .bg-container img {
+.page-container .bg-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
