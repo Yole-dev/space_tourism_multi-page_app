@@ -37,11 +37,30 @@ a {
 }
 
 /* Layout styles */
+/* Add these styles to your global CSS */
 .app-container {
   position: relative;
   min-height: 100vh;
-  width: 100%;
-  overflow: hidden;
+  overflow-x: hidden;
+}
+
+main {
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+}
+
+/* Optional: Add a fade-in animation for smoother visual transition */
+@keyframes fadeIn {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+main > * {
+  animation: fadeIn 0.3s ease forwards;
 }
 
 /* Home-specific background styles */
