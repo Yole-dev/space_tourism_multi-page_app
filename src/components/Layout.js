@@ -72,10 +72,7 @@ function NavList() {
           className={location.pathname === item.path ? "active" : ""}
         >
           <Link to={item.path}>
-            <span className={item.path === "/" ? "desktop-home-tag" : ""}>
-              {item.number}
-            </span>{" "}
-            {item.name}
+            <span>{item.number}</span> {item.name}
           </Link>
         </li>
       ))}
