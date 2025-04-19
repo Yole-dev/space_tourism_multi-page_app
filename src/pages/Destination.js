@@ -2,7 +2,9 @@ import mobileBackground from "../assets/images/destination/background-destinatio
 import tabletBackground from "../assets/images/destination/background-destination-tablet.jpg";
 import desktopBackground from "../assets/images/destination/background-destination-desktop.jpg";
 
-export default function Destionation() {
+// importing the data API
+
+export default function Destination() {
   return (
     <div className="page-container">
       <div className="bg-container">
@@ -24,6 +26,16 @@ export default function Destionation() {
           className="desktop-bg"
         />
       </div>
+
+      <div className="destination-container"></div>
+    </div>
+  );
+}
+
+function DestinationDetails() {
+  return (
+    <div>
+      <h1>hello</h1>
     </div>
   );
 }
