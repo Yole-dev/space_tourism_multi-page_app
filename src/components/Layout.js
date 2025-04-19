@@ -26,9 +26,11 @@ export default function Layout({ children }) {
         <hr className="header-divider" />
 
         {/* Desktop Navigation */}
-        <nav className="nav-bar desktop-nav">
-          <NavList />
-        </nav>
+        <div className="desktop-nav">
+          <ul>
+            <NavList />
+          </ul>
+        </div>
 
         {/* Mobile Navigation */}
         {isOpen && (
